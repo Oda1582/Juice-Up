@@ -99,12 +99,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             StartShooting();
+            Debug.Log("Down");
         }
 
         // Stop shooting when the left mouse button is released
         if (Input.GetMouseButtonUp(0))
         {
             StopShooting();
+            Debug.Log("Up");
         }
 
         // Rotate to mouse direction when shooting
@@ -313,18 +315,30 @@ public class PlayerController : MonoBehaviour
     public void UpgradeBulletsLVL1()
     {
         FireRate = 0.3f;
+        if (isShooting == true)
+        {
+            StartShootingAgain();
+        }
     }
 
     public void UpgradeBulletsLVL2()
     {
         FireRate = 0.1f;
         Speed = 600;
+        if (isShooting == true)
+        {
+            StartShootingAgain();
+        }
     }
 
     public void UpgradeBulletsLVL3()
     {
         Passed10Kills = true;
         canDash = false;
+        if (isShooting == true)
+        {
+            StartShootingAgain();
+        }
     }
 
     public void ResetCombo()
@@ -334,5 +348,12 @@ public class PlayerController : MonoBehaviour
         FireRate = FireRateOG;
         Speed = 450;
         canDash = true;
+    }
+
+    IEnumerator StartShootingAgain()
+    {
+        StopShooting();
+        yield return new WaitForSeconds(0.2f);  
+        StartShooting();
     }
 }
