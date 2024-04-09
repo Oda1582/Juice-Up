@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     float LastTimeLoose=0;
     public float ScrapComboTime = 10f;
 
-    public UIsScript UIRef;
+    UIsScript UIRef;
     public int EnemyKilledCount;
 
     public bool Passed10Kills;
@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         TimeLoose = 10f;
         ScrapComboTime = 10f;
         FireRate = FireRateOG;
+        UIRef = GameObject.Find("UIs Player").GetComponent<UIsScript>();
 
     }   
     void Update()
