@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Old_PlayerController : MonoBehaviour
 {
@@ -78,6 +79,11 @@ public class Old_PlayerController : MonoBehaviour
 
                 StartCoroutine(Dash());
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene("NewScene");
         }
     }
     void FixedUpdate()

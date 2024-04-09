@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7696167157940194103}
   - component: {fileID: 7696167157940194102}
   - component: {fileID: 7696167157940194101}
-  - component: {fileID: 877873900}
+  - component: {fileID: 7696167159711966962}
   m_Layer: 0
   m_Name: Old_Player
   m_TagString: Player
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &877873900
+--- !u!114 &7696167159711966962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7696167157940194099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47980f35af213dc498ce1d26ef335e6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 261c9a8acd2bca74ca7a0e4f25dae6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 500
@@ -159,13 +159,4 @@ MonoBehaviour:
   DashDuration: 0.25
   DashCooldown: 0.5
   AirDash: 0
-  BulletPrefab: {fileID: 4270954644967444177, guid: 9a5b9c99f30509c47b8efa17401e2088, type: 3}
-  TrailPrefab: {fileID: 1651788010568736267, guid: a622d5045a634664b803d72e9e8e59ae, type: 3}
-  bLoosingCombo: 0
-  TimeLoose: 10
-  ScrapComboTime: 10
-  UIRef: {fileID: 0}
-  EnemyKilledCount: 0
-  Passed10Kills: 0
-  FireRateOG: 0.5
-  FireRate: 0
+  BulletPrefab: {fileID: 4270954644967444177, guid: 23eeb5ce09384db4f901ee0de10c6a6a, type: 3}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -133,6 +134,11 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(Dash());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene("OldScene");
+        }
     }
 
     void StartShooting()
@@ -141,6 +147,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         isShooting = true;
+        Debug.Log("is Shooting");
         InvokeRepeating("Attack", 0f, FireRate); // Adjust the delay between shots as needed
     }
     void StopShooting()
@@ -317,7 +324,7 @@ public class PlayerController : MonoBehaviour
         FireRate = 0.3f;
         if (isShooting == true)
         {
-            StartShootingAgain();
+            StartCoroutine(StartShootingAgain());
         }
     }
 
@@ -327,7 +334,7 @@ public class PlayerController : MonoBehaviour
         Speed = 600;
         if (isShooting == true)
         {
-            StartShootingAgain();
+            StartCoroutine(StartShootingAgain());
         }
     }
 
@@ -337,7 +344,7 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         if (isShooting == true)
         {
-            StartShootingAgain();
+            StartCoroutine(StartShootingAgain());
         }
     }
 
@@ -352,8 +359,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StartShootingAgain()
     {
+        Debug.Log("Is Shooting, Making him stop");
         StopShooting();
-        yield return new WaitForSeconds(0.2f);  
+        yield return new WaitForSeconds(FireRate);  
         StartShooting();
+        Debug.Log("Stopped shooting, Making him shoot again");
     }
 }
