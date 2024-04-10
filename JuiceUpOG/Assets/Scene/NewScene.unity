@@ -569,6 +569,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1052186279}
+    - target: {fileID: 1120652319645644081, guid: 03ecd537e79d8b340a0f4152e9a83dd6, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120652319645644081, guid: 03ecd537e79d8b340a0f4152e9a83dd6, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1120652319645644082, guid: 03ecd537e79d8b340a0f4152e9a83dd6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -737,7 +745,7 @@ Transform:
   m_GameObject: {fileID: 960310267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0043, y: 0.1211, z: 0}
-  m_LocalScale: {x: 3.4921079, y: 2.695751, z: 2.7643}
+  m_LocalScale: {x: 3.492108, y: 2.695751, z: 2.7643}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1338491957}
@@ -1525,6 +1533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Before/After UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3081746854721034510, guid: 47e27ef2e91e44547a624e96d34bad32, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1052186279}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e27ef2e91e44547a624e96d34bad32, type: 3}
 --- !u!1001 &6051496216783124402
